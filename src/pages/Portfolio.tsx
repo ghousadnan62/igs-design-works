@@ -1,12 +1,13 @@
-
 import { useState } from 'react';
 import { MapPin, Calendar, Users, Award, Sun } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
+import LogoProcessor from '@/components/LogoProcessor';
 
 const Portfolio = () => {
   const [activeFilter, setActiveFilter] = useState('all');
+  const [showLogoProcessor, setShowLogoProcessor] = useState(false);
 
   const projects = [
     {
@@ -101,6 +102,23 @@ const Portfolio = () => {
     "Illinois", "Maine", "Minnesota"
   ];
 
+  if (showLogoProcessor) {
+    return (
+      <div className="min-h-screen py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8">
+          <Button 
+            onClick={() => setShowLogoProcessor(false)}
+            variant="outline"
+            className="mb-4"
+          >
+            ← Back to Portfolio
+          </Button>
+        </div>
+        <LogoProcessor />
+      </div>
+    );
+  }
+
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -114,6 +132,13 @@ const Portfolio = () => {
             <p className="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto">
               Showcasing successful photovoltaic solar projects across diverse applications
             </p>
+            <Button 
+              onClick={() => setShowLogoProcessor(true)}
+              variant="outline"
+              className="mt-4 text-white border-white hover:bg-white hover:text-blue-600"
+            >
+              Logo Background Removal Tool
+            </Button>
           </div>
         </div>
       </section>
