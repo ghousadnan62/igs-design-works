@@ -13,12 +13,12 @@ const Portfolio = () => {
       id: 1,
       title: "150MW Solar Farm Infrastructure Development",
       category: "utility-solar",
-      location: "Colorado, USA",
+      location: "Illinois, USA",
       year: "2023",
       description: "Complete civil engineering design for a 150MW utility-scale solar installation including access roads, drainage systems, and electrical infrastructure.",
       scope: ["Solar Array Layout", "Site Grading", "Drainage Systems", "Access Roads", "Electrical Infrastructure"],
       status: "Completed",
-      image: "https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=800&q=80"
+      image: "https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=800&q=80"
     },
     {
       id: 2,
@@ -29,51 +29,51 @@ const Portfolio = () => {
       description: "Community solar project with comprehensive site design including stormwater management, fire access roads, and utility interconnection.",
       scope: ["Solar Site Design", "Fire Access Design", "Stormwater Management", "Utility Infrastructure", "Erosion Control"],
       status: "In Progress",
-      image: "https://images.unsplash.com/photo-1460574283810-2aab119d8511?auto=format&fit=crop&w=800&q=80"
+      image: "https://images.unsplash.com/photo-1497440001374-f26997328c1b?auto=format&fit=crop&w=800&q=80"
     },
     {
       id: 3,
       title: "Agrivoltaic Solar Installation",
       category: "agrivoltaic",
-      location: "Wisconsin, USA",
+      location: "Maine, USA",
       year: "2022",
       description: "Innovative dual-use solar installation combining agriculture with renewable energy generation on working farmland.",
       scope: ["Agrivoltaic Design", "Utility Planning", "Agricultural Integration", "Water Management", "Landscape Design"],
       status: "Completed",
-      image: "https://images.unsplash.com/photo-1433086966358-54859d0ed716?auto=format&fit=crop&w=800&q=80"
+      image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80"
     },
     {
       id: 4,
-      title: "Commercial Rooftop Solar Array",
+      title: "Commercial Solar Farm Array",
       category: "commercial-solar",
       location: "Illinois, USA",
       year: "2022",
-      description: "Large-scale commercial rooftop solar installation with structural analysis, electrical design, and interconnection planning.",
-      scope: ["Rooftop Analysis", "Structural Engineering", "Electrical Design", "Code Compliance", "Interconnection"],
+      description: "Large-scale commercial solar farm installation with structural analysis, electrical design, and interconnection planning.",
+      scope: ["Solar Farm Analysis", "Structural Engineering", "Electrical Design", "Code Compliance", "Interconnection"],
       status: "Completed",
-      image: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=800&q=80"
+      image: "https://images.unsplash.com/photo-1501854140801-50d01698950b?auto=format&fit=crop&w=800&q=80"
     },
     {
       id: 5,
       title: "Solar Farm Access Infrastructure",
       category: "utility-solar",
-      location: "Indiana, USA",
+      location: "Minnesota, USA",
       year: "2023",
       description: "Heavy-duty access road design for solar installation and maintenance, including culvert design and soil stabilization.",
       scope: ["Heavy Load Roads", "Solar Access Design", "Culvert Systems", "Soil Stabilization", "Environmental Protection"],
       status: "In Progress",
-      image: "https://images.unsplash.com/photo-1487252665478-49b61b47f302?auto=format&fit=crop&w=800&q=80"
+      image: "https://images.unsplash.com/photo-1615729947596-a598e5de0ab3?auto=format&fit=crop&w=800&q=80"
     },
     {
       id: 6,
-      title: "Brownfield Solar Redevelopment",
-      category: "brownfield-solar",
-      location: "Michigan, USA",
+      title: "Solar Garden Redevelopment",
+      category: "community-solar",
+      location: "Maine, USA",
       year: "2021",
-      description: "Brownfield site remediation and solar development including specialized foundations, environmental controls, and site restoration.",
-      scope: ["Brownfield Remediation", "Solar Site Design", "Environmental Controls", "Access Systems", "Site Restoration"],
+      description: "Solar garden site development including specialized foundations, environmental controls, and site restoration.",
+      scope: ["Solar Garden Design", "Solar Site Design", "Environmental Controls", "Access Systems", "Site Restoration"],
       status: "Completed",
-      image: "https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=800&q=80"
+      image: "https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?auto=format&fit=crop&w=800&q=80"
     }
   ];
 
@@ -93,12 +93,12 @@ const Portfolio = () => {
   const stats = [
     { icon: Sun, number: "100+", label: "Solar Projects Completed" },
     { icon: Users, number: "50+", label: "Satisfied Solar Clients" },
-    { icon: MapPin, number: "7", label: "Licensed States" },
+    { icon: MapPin, number: "3", label: "Licensed States" },
     { icon: Calendar, number: "15+", label: "Years Solar Experience" }
   ];
 
   const licensedStates = [
-    "Colorado", "Illinois", "Indiana", "Michigan", "Maine", "Minnesota", "Wisconsin"
+    "Illinois", "Maine", "Minnesota"
   ];
 
   return (
@@ -144,7 +144,7 @@ const Portfolio = () => {
             <h2 className="text-2xl font-bold text-gray-900 mb-4">
               PE-Sealed Solar Projects Available In:
             </h2>
-            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4">
+            <div className="flex justify-center gap-4">
               {licensedStates.map((state, index) => (
                 <div key={index} className="text-center p-3 bg-white rounded-lg shadow-sm">
                   <div className="text-sm font-semibold text-blue-600">{state}</div>
